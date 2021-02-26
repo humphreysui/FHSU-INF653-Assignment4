@@ -15,8 +15,9 @@
     $statement->execute();
     $category = $statement->fetch(); 
     $statement->closeCursor();
-    $category_name = $category['categoryName']; 
-    return $category_name;
+    // bug fixed: "Trying to access array offset on value of type bool in"
+    $category_name = $category['categoryName'] ?? '.'; 
+    return $category_name ;
   }
 
   function delete_category($category_id) { 
