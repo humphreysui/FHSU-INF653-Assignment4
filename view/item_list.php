@@ -24,7 +24,6 @@
       <tr>
         <th>Title</th> 
         <th>Description</th>
-        <!-- <th class="right">Price</th>  -->
         <th>&nbsp;</th>
       </tr>
       <?php foreach($todoitems as $todoitem) : ?> 
